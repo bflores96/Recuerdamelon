@@ -1,0 +1,141 @@
+:root {
+    --verde: #6BF178;
+    --verdeOscuro: #288E4C;
+    --verdeGris: #8DFFB5;
+    --blanco: #FFFFFF;
+    --negro: #000000;
+    --fuente: 'Quicksand', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuente);
+    background-color: var(--verdeOscuro);
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    height: 100vh;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: 80%;
+    border-radius: 50px;
+    background-color: #2333338f;
+    transform: translate(25%, calc(100vh - 130%));
+}
+
+section {
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    padding: 10%;
+}
+
+img {
+    width: 100%;
+}
+
+.background-video {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+video {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+/* -------------------------------------------- */
+
+.texto-formulario h2,
+a,
+.input label,
+.password-olvidada,
+.reguistro-usuario {
+    color: var(--blanco);
+}
+
+.texto-formulario h2 {
+    text-align: center;
+}
+
+.texto-formulario p {
+    text-align: center;
+}
+
+.input label {
+    display: block;
+    font-weight: bold;
+    margin: 20px 0px 5px;
+}
+
+.password-olvidada a {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.reguistro-usuario a {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.input input {
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input button[type="submit"] {
+    background-color: var(--verdeGris);
+    color: var(--blanco);
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+    transition: background-color .3s ease-in-out;
+    border-radius: 50px;
+    width: 100%;
+    padding: .5em 0;
+}
+
+.input button[type="submit"]:hover {
+    cursor: pointer;
+    color: var(--verde);
+    background-color: var(--blanco);
+}
+
+
+/* Animacion */
+
+.inf {
+    animation: que-melon 5s infinite;
+}
+
+@keyframes que-melon {
+    0% {
+        color: var(--verdeOscuro);
+    }
+    50% {
+        color: var(--verde);
+    }
+    100% {
+        color: var(--verdeGris);
+    }
+}
